@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: white;">
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+
+                            <h2 class="mb-3"> Todo List</h2>
+                            <form class="d-flex justify-content-center align-items-center mb-4">
+                                <div class="form-outline flex-fill">
+                                    <label class="form-label" for="form3">What do you need to do today?</label>
+                                    <input type="text" id="form3" class="form-control form-control-lg"
+                                        placeholder="Add Your Task here...." />
+                                    <b><span id="error" style="color: red; display: none;"></span></b><br>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg ms-2" id="btnsubmit"
+                                    style="background-color:#9dc6f5 ; border: none; color: black; font-weight: 900; margin-bottom: 5px;">Add</button>
+                                <button type="edit" class="btn btn-primary btn-lg ms-2"
+                                    style="display: none; font-weight: 900; margin-bottom: 5px;"
+                                    id="btnedit">Edit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="taskremcontainer">
+            <p class="taskRemaining">Task Pending</p>
+            <div class="tasklistrem" style="display: none;">
+                <ul class="list-group mb-0" id="taskpending">
+
+                </ul>
+            </div>
+        </div>
+        <div class="taskcomcontainer">
+            <p class="taskcompleted">Task Completed</p>
+            <div class="tasklistcom" style="display: none;">
+                <ul class="list-group mb-0" id="taskcompleted">
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
